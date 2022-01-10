@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class SavingsCalculatorApplication extends Application {
  
     @Override
-    public void start(Stage ikkuna) {
+    public void start(Stage stage) {
         BorderPane display = new BorderPane();
  
         Slider monthlySum = new Slider();
@@ -90,8 +90,8 @@ public class SavingsCalculatorApplication extends Application {
         });
  
         Scene view = new Scene(display, 640, 480);
-        ikkuna.setScene(view);
-        ikkuna.show();
+        stage.setScene(view);
+        stage.show();
     }
  
     private void updateChart(double monthlySavings, double interestRate, XYChart.Series savings, XYChart.Series savingsWithInterest) {
